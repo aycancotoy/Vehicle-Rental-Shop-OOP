@@ -2,7 +2,7 @@
 """
 Created on Sat Jan  2 19:22:13 2021
 
-@author: Acer
+@author: Aycan ÇOTOY - Programı türkçeleştirelim mi?
 """
 from rent import CarRent, BikeRent, Customer
 
