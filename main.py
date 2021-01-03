@@ -2,8 +2,9 @@
 """
 Created on Sat Jan  2 19:22:13 2021
 
-@author: Aycan ÇOTOY - Programı türkçeleştirelim mi?
-DENEME -2
+@author: Aycan ÇOTOY - Araç Kiralama Programı - TÜRKÇE
+
+ARA YÜZ BÖLÜMÜ(Görünen Bölüm)
 """
 from rent import CarRent, BikeRent, Customer
 

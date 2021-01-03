@@ -4,7 +4,7 @@ Created on Sat Jan  2 17:00:51 2021
 
 @author: Aycan ÇOTOY
 
-Kiralama Bölümü
+ANA BÖLÜM(Kiralama Bölümü)
 """
 
 import datetime
