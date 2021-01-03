@@ -2,7 +2,9 @@
 """
 Created on Sat Jan  2 17:00:51 2021
 
-@author: Acer
+@author: Aycan ÇOTOY
+
+Kiralama Bölümü
 """
 
 import datetime
@@ -16,25 +18,25 @@ class VehicleRent:
     
     def displayStock(self): # stokta kaç var?
         """
-            display stock
+            Toplam araç sayısı
         """
         #kiralamak için uygun araç sayısı
-        print("{} vehicle available to rent".format(self.stock))
+        print("{} araç kiralamaya uygun".format(self.stock))
         return self.stock
     
     def rentHourly(self, n): # saatlik kiralama
         """
-            rent hourly
+            Saatlik Kiralama
         """
         if n <= 0:
-            print("Number should be positive")
+            print("0'dan büyük rakam girmelisiniz")
             return None
         elif n > self.stock:
-            print("Sorry {} vehicle available to rent".format(self.stock))
+            print("Üzgünüz {} araç kiralamaya uygun".format(self.stock))
             return None
         else:
             self.now = datetime.datetime.now()
-            print("Rented a {} vehicle for hourly at {} hours".format(n,self.now.hour))
+            print("Toplam {} araç  {} saatliğine kiralandı".format(n,self.now.hour))
             
             self.stock -= n  
             
@@ -43,17 +45,17 @@ class VehicleRent:
     
     def rentDaily(self, n):
         """
-            rent daily
+            Günlük Kiralama
         """
         if n <= 0:
-            print("Number should be positive")
+            print("0'dan büyük rakam girmelisiniz")
             return None
         elif n > self.stock:
-            print("Sorry {} vehicle available to rent".format(self.stock))
+            print("Üzgünüz {} araç kiralamaya uygun".format(self.stock))
             return None
         else:
             self.now = datetime.datetime.now()
-            print("Rented a {} vehicle for daily at {} hours".format(n,self.now.hour))
+            print("Toplam {} araç {} günlüğüne kiralandı".format(n,self.now.hour))
             
             self.stock -= n 
             
@@ -61,7 +63,7 @@ class VehicleRent:
         
     def returnVehicle(self, request, brand): #kiraladığı aracı geri getirdi. Şimdi fatura kesilcek.
         """
-            return a bill
+            Fatura Kes
         """
         car_h_price = 10
         car_d_price = car_h_price*8/10*24
@@ -83,11 +85,11 @@ class VehicleRent:
                     bill = rentalPeriod/(3600*24)*car_d_price*numOfVehicle
                 
                 if (2 <= numOfVehicle): # discount için
-                    print("You have extra 20% discount")
+                    print("Ekstra olarak 20% indirim kazandınız")
                     bill = bill*0.8
                     
-                print("Thank you for returning your car")
-                print("Price: $ {}".format(bill))
+                print("Arabayı geri getirdiğiniz için teşekkürler")
+                print("Ücret: $ {}".format(bill))
                 return bill
             
         elif brand == "bike":
@@ -102,15 +104,15 @@ class VehicleRent:
                     bill = rentalPeriod/(3600*24)*bike_d_price*numOfVehicle
                 
                 if (4 <= numOfVehicle): # discount için
-                    print("You have extra 20% discount")
+                    print("Ekstra olarak 20% indirim kazandınız")
                     bill = bill*0.8
                     
-                print("Thank you for returning your bike")
-                print("Price: $ {}".format(bill))
+                print("Bisikleti geri getirdiğiniz için teşekkürler")
+                print("Ücret: $ {}".format(bill))
                 return bill  
         
         else:
-            print("You do not rent a vehicle")
+            print("Araç Kiralamadınız")
             return None
                 
         
@@ -126,7 +128,7 @@ class CarRent(VehicleRent):
     
     def discount(self, b):
         """
-            discount 
+            Ücret 
         """
         bill = b - (b*discount_rate)/100
         return bill
@@ -151,42 +153,42 @@ class Customer:
     
     def requestVehicle(self, brand):
         """
-            take a request bike or car from customer
+            Müşteri araba ya da bisiklet talep etsin.
         """
         if brand == "bike":
-            bikes = input("How many bikes would you like to rent?")
+            bikes = input("Kaç adet bisiklet kiralamak istersiniz?")
             
             try:
                 bikes = int(bikes)
             except ValueError:
-                print("number should be number")
+                print("Sadece rakam giriniz")
                 return -1
             
             if bikes < 1:
-                print("Number of bikes must be greater than zero")
+                print("0'dan büyük rakam giriniz.")
                 return -1
             else:
                 self.bikes = bikes
             return self.bikes         
             
         elif brand == "car":
-            cars = input("How many cars would you like to rent?")
+            cars = input("Kaç adet bisiklet kiralamak istersiniz?")
            
             try:
                 cars = int(cars)
             except ValueError:
-                print("number should be number")
+                print("Sadece rakam giriniz")
                 return -1
             
             if cars < 1:
-                print("Number of bikes must be greater than zero")
+                print("0'dan büyük rakam giriniz.")
                 return -1
             else:
                 self.cars = cars
             return self.cars  
             
         else:
-            print("Request vehicle error")
+            print("Araç talep hatası")
         
     
     def returnVehicle(self, brand):
