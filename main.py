@@ -75,12 +75,12 @@ while True:
         
         print("""
               ***** CAR MENU *****
-              1. Display available cars
-              2. Request a car on hourly basis  $10
-              3. Request a car on daily basis  $192
-              4. Return a car
-              5. Main Menu
-              6. Exit
+              1. Müsait Durumdaki Araba Sayısı
+              2. Arabayı saatlik kiralama $10
+              3. Arabayı günlük kiralama  $192
+              4. Bisikleti Teslim Et
+              5. Ana Menüye Dön
+              6. Programı Kapat.
               """)
         choice = input("Enter choice: ")
         
@@ -113,13 +113,13 @@ while True:
         elif choice == 6:
             break
         else:
-            print("Invalid input. Please enter a number between 1-6")
+            print("Yanlış giriş. Lütfen belirtilen [1-6] aralıktaki sayıyı girininiz.")
             main_menu = True
             
     elif choice == "Q" or choice == "q":
         break
     
     else:
-        print("Invalid input! Please Enter A-B-Q")
+        print("Hatalı giriş! Lütfen sadece (A-B-Q) karekterlerinden birini giriniz")
         main_menu = True
-    print("Thank you for using the vehicles rental shop")
+    print("Araç kiralama programını kullandığınız için teşekkür ederiz.")
