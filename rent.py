@@ -193,7 +193,7 @@ class Customer:
     
     def returnVehicle(self, brand):
         """
-            return bike or car
+            Bisikleti veya arabayı iade et.
         """
         if brand == "bike":
             if self.rentalTime_b and self.rentalBasis_b and self.bikes:
