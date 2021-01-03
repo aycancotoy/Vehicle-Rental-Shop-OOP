@@ -17,10 +17,10 @@ while True:
     
     if main_menu:
         print("""
-              ***** Vehicle Rental Shop*****
-              A. Bike Menu
-              B. Car Menu
-              Q. Exit
+              ***** ARAÇ KİRALAMA MERKEZİ*****
+              A. Bisiklet Menüsü
+              B. Araba Menüsü 
+              Q. Çıkış
               """)
         main_menu = False
         
