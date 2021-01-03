@@ -37,12 +37,12 @@ while True:
               5. Ana Menüye Dön
               6. Programı Kapat.
               """)
-        choice = input("Enter choice: ")
+        choice = input("Seçiminizi Girin:  ")
         
         try:
             choice = int(choice)
         except ValueError:
-            print("It is not integer")
+            print("Bu bir sayı değil")
             continue
         
         if choice == 1:
@@ -68,7 +68,7 @@ while True:
         elif choice == 6:
             break
         else:
-            print("Invalid input. Please enter a number between 1-6")
+            print("Yanlış giriş. Lütfen belirtilen [1-6] aralıktaki sayıyı girininiz.")
             main_menu = True
             
     elif choice == "B" or choice == "b":
