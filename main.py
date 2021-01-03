@@ -24,18 +24,18 @@ while True:
               """)
         main_menu = False
         
-        choice = input("Enter choice: ")
+        choice = input("Seçiminizi Girin: ")
         
     if choice == "A" or choice == "a":
         
         print("""
-              ***** BIKE MENU *****
-              1. Display available bikes
-              2. Request a bike on hourly basis  $5
-              3. Request a bike on daily basis  $84
-              4. Return a bike
-              5. Main Menu
-              6. Exit
+              ***** BİSİKLET MENÜSÜ *****
+              1. Müsait Durumdaki Bisiklet Sayısı
+              2. Bisikleti saatlik kiralama $5
+              3. Bisikleti günlük kiralama  $84
+              4. Bisikleti Teslim Et
+              5. Ana Menüye Dön
+              6. Programı Kapat.
               """)
         choice = input("Enter choice: ")
         
